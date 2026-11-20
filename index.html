@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-yEPZ7jP9S0QKiUQ0m3jjsO4ProIW7wvR9gXkI7JOGa2XVsw53Yke2bsdkBbjmmiX" crossorigin="anonymous">
+</head>
+
+<body class="bg-body-tertiary">
+    <header class="text-center text-light bg-primary">
+        <h1>La mia Libreria</h1>
+        <p>Aggiungi i tuoi libri e segnali come letti</p><br>
+    </header>
+    <main><br>
+        <div class="row justify-content-center col-12 col-md-8 col-lg-6 mx-auto w-md-75">
+            <form id="addBook" class="form-select fw-bold">
+                <h3">Aggiungi un Libro</h3><br><br>
+                    <label class="form-label" for="title">Titolo</label>
+                    <input class="col-12 my-3 form-control" type="text" id="newTitle" name="title">
+                    <label class="form-label" for="author">Autore</label>
+                    <input class="col-12 my-3 form-control" type="text" id="newAuthor" name="author">
+                    <label class="form-label" for="Date">Anno</label>
+                    <input class="col-12 my-3 form-control" type="text" id="newYear" name="year">
+                    <label class="form-label" for="format">Formato</label>
+                    <select class="col-12 my-3 form-control" name="formato" id="newFormat">
+                        <option value="cartaceo" selected>Cartaceo</option>
+                        <option value="digitale">Digitale</option>
+                    </select>
+                    <div class="mb-3 d-none" id="digital-extra-field">
+                        <label for="newPlatform" class="form-label">Piattaforma o Link e-book</label>
+                        <input type="text" id="newPlatform" class="form-control"
+                            placeholder="Es. Kindle, Apple Books, PDF...">
+                    </div>
+                    <input class=" btn btn-primary col-4 my-3 rounded-2" type="submit" name="submit" id="submit"
+                        value="Aggiungi">
+            </form>
+
+        </div><br>
+        <div>
+            <h3 class="col-12 text-center">I tuoi libri <span></span></h3>
+        </div>
+        <div class="container" id="bookCard">
+            <div id="emptyCard"
+                class=" row col-6 border border-3 text-center bg-body py-3 mx-auto border-primary rounded-2 ">
+                <p>Non ci sono libri nella tua libreria.</p>
+
+
+            </div><br>
+        </div>
+
+
+    </main>
+
+    <script type="module" src="assets/js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-WyOxWvTyr1QaMPfiPJSv76iReVthorl5uWlFtZPyK0IEB0hGzo9y5Bp9mYanr8Bu"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
